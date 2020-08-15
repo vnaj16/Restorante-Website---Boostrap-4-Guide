@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- build:css css/main.css -->
     <!--Boostrap Locally-->
     <!--<link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">-->
 
@@ -16,6 +18,7 @@
 
 
     <link rel="stylesheet" href="/css/styles.css">
+    <!-- endbuild -->
 
     <title>Ristorante Con Fusion</title>
 </head>
@@ -53,7 +56,7 @@
                     </li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="loginButton">
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -116,7 +119,7 @@
                 </div>
 
                 <div class="col-12 col-sm-3 d-flex align-items-center">
-                    <a data-toggle="modal" data-target="#reserveModal" class="btn btn-warning btn-block " role="button">
+                    <a class="btn btn-warning btn-block" id="reservetableButton" role="button">
                         Reserve Table
                     </a>
                 </div>
@@ -402,6 +405,7 @@
     <script src="/node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>-->
 
+    <!-- build:js js/main.js -->
     <!--JS Online-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -412,24 +416,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
-
-    <script>
-        $(document).ready(function () {
-            $("#mycarousel").carousel({ interval: 2000 });
-            $("#carouselButton").click(function(){
-                if ($("#carouselButton").children("span").hasClass('fa-pause')) {
-                    $("#mycarousel").carousel('pause');
-                    $("#carouselButton").children("span").removeClass('fa-pause');
-                    $("#carouselButton").children("span").addClass('fa-play');
-                }
-                else if ($("#carouselButton").children("span").hasClass('fa-play')){
-                    $("#mycarousel").carousel('cycle');
-                    $("#carouselButton").children("span").removeClass('fa-play');
-                    $("#carouselButton").children("span").addClass('fa-pause');                    
-                }
-            });
-        });
-    </script>
+    <script src="js/scripts.js"></script>
+    <!-- endbuild -->
 </body>
 
 </html>
